@@ -5,4 +5,34 @@
 }
 body{
     font-family: sans-serif;
+    background-image: url(../img/train-wallpaper.jpg);
+    background-position: center;
+}
+/*!utulity ************************************************************/
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+.d-flex{
+    display: flex;
+}
+/*! body**********************************/
+.main-content{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid wheat;
+    min-height: 300px;
+    min-width: 450px;
+    margin-top: 30%;
+    padding: 20px;
+    justify-content: space-between;
+}
+#target{
+    display: flex;
+    align-items: center;
+}
+
+.main-content .bi-person-circle{
+    font-size: 60px;
+    color: wheat;
 }
