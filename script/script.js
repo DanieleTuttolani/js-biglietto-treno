@@ -14,8 +14,21 @@ console.log("js ok")
 const targetTag = document.getElementById("target");
 
 //dati dell'utenza
-const userAge = parseInt(prompt(" Inserisci la tua età" , "18"));
+const userAge = parseInt(prompt(" Inserisci la tua età" , "70"));
 const userKm = parseInt(prompt(" Quale distanza vuoi percorrere (in km)" , "50"));
 
 // prezzo del biglietto
-const userPrice = userKm * 0.21;
+let price = userKm * 0.21;
+//sconti relativi all'età
+if (userAge <= 18){
+    youngDiscount = price * 20 / 100;
+    finalPrice = price - youngDiscount;
+}
+
+if (userAge >= 65){
+    elderDiscount = price * 40 / 100;
+    finalPrice = price - elderDiscount;
+}
+//dispongo il prezzo in forma umana
+targetTag.innerText = `Risultato: Ecco il prezzo del tuo biglietto ${(Math.round(finalPrice * 100) / 100).toFixed(2)
+}`;
